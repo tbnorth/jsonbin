@@ -3,7 +3,8 @@
 A simple approach to JSON compression when the keys are known in advance.
 
 This is only intended for low bandwidth situations where you want compression
-"on the wire", e.g. communicating with a PyBoard over a radio link:
+"on the wire", e.g. communicating with a PyBoard over a radio link.  Which is
+a situation where zlib / gzip style compression won't work either.
 
 ```python
 # sender
@@ -14,7 +15,7 @@ data = jb.decompress(radio1.read())
 ```
 
 I.e. the compressed format's not intended for writing to a file
-or anything other than transient tranmission.
+or anything other than transient transmission.
 
 It's “domain specific” because it requires both ends have a
 synchronized list of fields like this:

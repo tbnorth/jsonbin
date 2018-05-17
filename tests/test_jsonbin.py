@@ -59,6 +59,7 @@ def main():
     print(len(jb().compress(DEMO_JSON)))
     print(json.dumps(DEMO_JSON))
     print(jb().compress(DEMO_JSON))
+    print(jb().decompress(jb().compress(DEMO_JSON)))
 
 if __name__ == '__main__':
     main()
