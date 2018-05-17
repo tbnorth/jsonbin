@@ -1,6 +1,7 @@
 import json
 
 MARK = b'\x00'
+
 class JSONBin(object):
     """JSONBin - Domain specific JSON<->binary compression"""
 
@@ -42,6 +43,7 @@ class JSONBin(object):
                 MARK
             ])
         return b''.join(ans)
+
     def decompress(self, data, return_dict=False):
         """compress - compress dict or json
 
@@ -66,5 +68,3 @@ class JSONBin(object):
         if return_dict:
             return ans
         return json.dumps(ans)
-
-

@@ -41,6 +41,7 @@ def test_compress_key(jb, answer):
     compressed = jb.compress(json.dumps({'T':2, key: 4.77}))
     answer = answer[:2] + '4.77'.encode('ascii') + answer[2:]
     assert compressed == answer
+
 def test_decompress_dict(jb):
     """test_compress - test compression"""
     for key in DEMO_JSON:
@@ -53,3 +54,11 @@ def test_init(jb):
     keys = sorted(KEY_INFO)
     assert jb.keys.index(keys[2]) == 2
 
+def main():
+    print(len(json.dumps(DEMO_JSON)))
+    print(len(jb().compress(DEMO_JSON)))
+    print(json.dumps(DEMO_JSON))
+    print(jb().compress(DEMO_JSON))
+
+if __name__ == '__main__':
+    main()
