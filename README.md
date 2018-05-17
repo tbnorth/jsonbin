@@ -37,8 +37,8 @@ In the test example it gets about 50% compression:
 182 bytes: {"lon": "-92.003145", "gpstime": "2017-09-23 10:24:15", "lat": "46.839547",
   "dnhdop": "3,8,1.26", "cnd_tmp_n": 21, "tmp": 1584.524, "msg": "BAD LINE: ",
   "cnd": 1709.571, "name": "o"}
-96 bytes: b'1709.571\x0021\x00"3,8,1.26"\x0046.8395\x00-92.0031\x00"BAD LINE: "\x00
-  "o"\x001584.524\x00gpstime\x00"2017-09-23 10:24:15"\x00'
+96 bytes: 1709.571█21█"3,8,1.26"█46.8395█-92.0031█"BAD LINE: "█
+  "o"█1584.524█gpstime█"2017-09-23 10:24:15"█
 ```
 
 It would be 89 bytes but the gpstime key was deliberately treated as an unknown
